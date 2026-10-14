@@ -1,16 +1,27 @@
-# 🚀 Optimización y Predicción de Rangos Salariales en el Mercado IT de Argentina
+## 🚀 Optimización y Predicción de Rangos Salariales en el Mercado IT de Argentina
 
-Proyecto final orientado a la aplicación de Machine Learning para la atracción y retención de talento tecnológico.
+Proyecto final  orientado al análisis del mercado laboral tecnológico argentino mediante técnicas de análisis exploratorio y Machine Learning, con el objetivo de estudiar las remuneraciones, identificar perfiles profesionales y aportar información para la toma de decisiones salariales.
+
+## 👥 Equipo de Trabajo
+
+Este proyecto fue desarrollado de manera colaborativa, integrando conocimientos de análisis exploratorio de datos, ingeniería de características y Machine Learning.
+
+Integrantes:
+
+-Braian Centurion
+
+-Cinthia Vivas
+
 
 ---
 
 ## 📋 1. Resumen del Dataset
 
-El proyecto se basa en la **Encuesta de Remuneración Salarial IT en Argentina (2023)**. Este dataset recopila información detallada sobre miles de profesionales del sector tecnológico en el país, abarcando variables clave como:
+El proyecto se basa en la **Encuesta de Remuneración Salarial IT en Argentina (2026)**. Este dataset recopila información detallada sobre miles de profesionales del sector tecnológico en el país, abarcando variables clave como:
 
 - **Compensación:** Salarios netos/brutos percibidos.
 - **Perfil profesional:** Puesto (Rol), Años de experiencia general y en el puesto actual, Nivel de _Seniority_.
-- **Stack tecnológico:** Tecnologías principales utilizadas (lenguajes, frameworks, bases de datos), nivel de inglés.
+- **Stack tecnológico:** Tecnologías principales utilizadas (lenguajes, frameworks, bases de datos)
 - **Datos demográficos y laborales:** Género, tipo de contratación (relación de dependencia, monotributo, etc.), modalidad de trabajo (remoto, híbrido, presencial).
 
 ---
@@ -35,7 +46,7 @@ El objetivo de este proyecto es desarrollar una herramienta predictiva orientada
 
 ## 📊 3. Variables Clave del Proyecto
 
-- **Variable Objetivo (Target - $y$):** Salario (Neto/Bruto mensual).
+- **Variable Objetivo (Target - $y$):** Salario (Bruto mensual).
 - **Variables Predictoras (Features - $X$):**
   - **Experiencia:** Años de experiencia total y en el puesto.
   - **Seniority:** Junior, Semi-Senior, Senior, Lead, etc.
@@ -66,10 +77,18 @@ Para resolver este problema de negocio, se implementará una estrategia de Machi
 ## 📂 Estructura del Repositorio
 
 ```text
-├── dataset/                  # Datos crudos y procesados
+├── dataset/                          
+│   # Datos crudos y procesados
 ├── notebooks/
-│   ├── 01_EDA_y_Limpieza.ipynb       # Análisis exploratorio y transformación
-│   ├── 02_Modelos_Supervisados.ipynb  # Regresión y optimización de hiperparámetros
-│   └── 03_Modelo_No_Supervisado.ipynb # Clustering y segmentación
+│   ├── 01_EDA_y_Limpieza.ipynb
+│   │   # Análisis exploratorio y limpieza de datos
+│   ├── 02_Feature_Engineering.ipynb
+│   │   # Creación, transformación y selección de variables
+│   ├── 03_MS_Regresion.ipynb
+│   │   # Modelos de regresión y optimización de hiperparámetros
+│   ├── 04_MS_Clasificacion.ipynb
+│   │   # Modelos de clasificación y optimización de hiperparámetros
+│   ├── 05_Modelo_No_Supervisado.ipynb
+│   │   # Clustering y segmentación
 └── README.md
 ```
