@@ -67,12 +67,13 @@ Para resolver este problema de negocio, se implementará una estrategia de Machi
   - $RMSE$ (Root Mean Squared Error) para medir el error en pesos/moneda.
   - $R^2$ Score para evaluar qué porcentaje de la variabilidad salarial explica nuestro modelo.
 
-### B. Modelos No Supervisados (Clustering)
-
-- **Modelo a evaluar:** `K-Means`.
-- **Por qué:** Agrupar perfiles tecnológicos similares en función de su compensación y habilidades para identificar "clústeres de mercado" (ej. perfiles de datos, desarrollo backend, infraestructura), lo que ayuda a entender mejor los nichos salariales antes de aplicar la regresión.
-
----
+## B. Modelos No Supervisados (Clustering)
+Modelos a evaluar: **K-Mean**s (modelo principal), DBSCAN y Clustering Jerárquico (Ward).
+Por qué: Agrupar perfiles profesionales similares según su trayectoria (años de experiencia, antigüedad en la empresa, años en el puesto y edad) para identificar "segmentos de mercado" y entender mejor los niveles salariales. El salario no se usa para agrupar: se usa después para comprobar si los segmentos cobran distinto.
+Métricas de éxito:
+**Silhouette** para evaluar qué tan bien separados están los grupos.
+**ARI** entre corridas con distintas semillas para medir la estabilidad de la segmentación.
+Resultado: K-Means con 3 segmentos (Silhouette de **0,39** y estabilidad de **0,98**): Trayectoria inicial **(62,6%, mediana de $2,9 M)**, Experimentados con movilidad **(29,2%, $4,2 M)** y Veteranos de una sola empresa **(8,2%, $3,5 M)**. DBSCAN se descartó porque no logra segmentar.
 
 ## 📂 Estructura del Repositorio
 
